@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Terminal, GitBranch, Cpu } from 'lucide-react';
+import { Rocket, Terminal, GitBranch, Cpu, Server } from 'lucide-react';
 
 const CurrentlyBuilding = () => {
   const items = [
@@ -51,9 +51,4 @@ const CurrentlyBuilding = () => {
       </div>
     </section>
   );
-};
-
-// Add Server import since I missed it in lucide-react above
-import { Server } from 'lucide-react';
-
 export default CurrentlyBuilding;

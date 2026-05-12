@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Star, GitFork, Activity } from 'lucide-react';
-
+import { Star, GitFork, Activity } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 const GithubSection = () => {
   return (
     <section className="py-24 relative overflow-hidden">
@@ -16,7 +16,7 @@ const GithubSection = () => {
         >
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-3">
-              <Github className="w-8 h-8 text-white" />
+              <FaGithub className="w-8 h-8 text-white" />
               Open Source & <span className="text-gradient">Activity</span>
             </h2>
             <div className="w-16 h-1 bg-purple-500 rounded-full"></div>
