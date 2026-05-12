@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Activity, Code2 } from 'lucide-react';
+import { ExternalLink, Activity, Code2, Layers } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
 const featuredProjects = [
@@ -11,16 +11,28 @@ const featuredProjects = [
     tech: ["React.js", "Firebase", "Node.js", "Tailwind CSS", "AI APIs"],
     live: "https://forgee-mentor.vercel.app/",
     github: "https://github.com/ashishsingh256259/Mentor.git",
-    features: ["AI mentor integration", "ATS resume analysis", "Skill-gap analysis", "Recruiter dashboard"]
+    features: ["AI mentor integration", "ATS resume analysis", "Skill-gap analysis", "Recruiter dashboard"],
+    architecture: ["AI-integrated workflow systems", "Recruiter/student role-based architecture", "Analytics-driven dashboard structure", "Modular frontend/backend workflow"]
   },
   {
-    title: "Smart Parking Guidance System",
+    title: "Realtime Collaboration Workspace",
+    description: "A full-stack collaborative productivity platform built using React, Node.js, Socket.IO, and MongoDB. The platform enables users to create shared rooms, communicate in realtime, collaborate on tasks, and manage synchronized workspace activities with instant updates across connected users. The system implements realtime bidirectional communication using Socket.IO, room-based collaboration architecture, live online presence tracking, typing indicators, and persistent message storage. The project focuses on realtime systems engineering, scalable event-driven communication, and collaborative application architecture.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072",
+    tech: ["React.js", "Vite", "Node.js", "Express.js", "Socket.IO", "MongoDB", "Firebase"],
+    live: "https://github.com/ashishsingh256259/Realtime-Workspace.git",
+    github: "https://github.com/ashishsingh256259/Realtime-Workspace.git",
+    features: ["Realtime room-based messaging", "Live online users and typing indicators", "Shared collaboration workspace", "Persistent chat storage with MongoDB", "Responsive modern SaaS-style UI", "Socket.IO realtime synchronization", "Authentication-ready architecture", "Reusable frontend/backend modular structure"],
+    architecture: ["Socket.IO realtime synchronization", "Room-based communication architecture", "Persistent MongoDB storage", "Event-driven system design"]
+  },
+  {
+    title: "Smart Parking System",
     description: "AI-powered smart parking guidance system using A* Search and Bayesian reasoning to identify the shortest and most reliable parking path in smart city environments.",
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=2070",
     tech: ["React.js", "JavaScript", "A* Algorithm", "Bayesian Networks"],
     live: "https://smart-parking-system-fawn.vercel.app/",
     github: "https://github.com/ashishsingh256259/Smart-Parking-System.git",
-    features: ["A* shortest path search", "Bayesian slot prediction", "Graph-based parking model"]
+    features: ["A* shortest path search", "Bayesian slot prediction", "Graph-based parking model"],
+    architecture: ["Realtime slot monitoring", "Interactive parking visualization", "Smart dashboard architecture", "Scalable UI workflow"]
   }
 ];
 
@@ -95,6 +107,21 @@ const Projects = () => {
                     ))}
                   </ul>
                 </div>
+
+                {project.architecture && (
+                  <div className="space-y-4 pt-2">
+                    <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider flex items-center gap-2">
+                      <Layers size={16} className="text-purple-400" /> Architecture Highlights
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.architecture.map(arch => (
+                        <span key={arch} className="px-3 py-1.5 text-xs font-medium rounded-md bg-white/5 border border-white/10 text-gray-300 hover:border-purple-400/50 hover:text-white transition-colors">
+                          {arch}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech.map(t => (

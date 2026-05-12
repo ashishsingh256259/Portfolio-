@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Focused on full-stack development, AI-powered systems, interactive dashboards, and scalable digital experiences.
+            Building realtime systems, AI-powered platforms, and modern full-stack web experiences.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
@@ -48,6 +48,7 @@ const Hero = () => {
               Download Resume
             </a>
           </div>
+          <p className="text-sm text-gray-500 mt-6 font-medium">Focused on scalable systems, realtime communication, and interactive product engineering.</p>
 
           <div className="flex items-center justify-center gap-6 pt-12">
             <SocialLink href="https://github.com/ashishsingh256259" icon={<FaGithub size={24} />} />
