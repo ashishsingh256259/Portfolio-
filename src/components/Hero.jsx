@@ -47,6 +47,7 @@ const Hero = () => {
               <Download size={18} />
               Download Resume
             </a>
+          </div>
           <p className="text-sm text-gray-500 mt-6 font-medium">Focused on scalable systems, realtime communication, and interactive product engineering.</p>
 
           {/* Subtle Live System Monitor */}
