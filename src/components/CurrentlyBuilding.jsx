@@ -50,5 +50,6 @@ const CurrentlyBuilding = () => {
         </div>
       </div>
     </section>
-  );
+};
+
 export default CurrentlyBuilding;
