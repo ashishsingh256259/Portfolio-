@@ -47,10 +47,33 @@ const Hero = () => {
               <Download size={18} />
               Download Resume
             </a>
-          </div>
           <p className="text-sm text-gray-500 mt-6 font-medium">Focused on scalable systems, realtime communication, and interactive product engineering.</p>
 
-          <div className="flex items-center justify-center gap-6 pt-12">
+          {/* Subtle Live System Monitor */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mt-10 mx-auto max-w-sm glass-card rounded-xl p-4 border border-white/5 flex items-center justify-between text-xs font-mono"
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex gap-1">
+                <span className="w-1 h-3 bg-accent-cyan rounded-full animate-pulse" />
+                <span className="w-1 h-5 bg-accent-blue rounded-full animate-pulse delay-75" />
+                <span className="w-1 h-2 bg-purple-400 rounded-full animate-pulse delay-150" />
+              </div>
+              <span className="text-gray-400 uppercase tracking-wider">System.Status:</span>
+              <span className="text-green-400 font-semibold flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                OPTIMAL
+              </span>
+            </div>
+            <div className="text-gray-500">
+              <span className="text-accent-cyan opacity-80">socket.connected</span>
+            </div>
+          </motion.div>
+
+          <div className="flex items-center justify-center gap-6 pt-10">
             <SocialLink href="https://github.com/ashishsingh256259" icon={<FaGithub size={24} />} />
             <SocialLink href="https://www.linkedin.com/in/ashish-singh-946711367" icon={<FaLinkedin size={24} />} />
             <SocialLink href="mailto:Ashishsingh100580@gmail.com" icon={<Mail size={24} />} />

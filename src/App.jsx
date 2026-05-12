@@ -11,6 +11,8 @@ import TerminalSection from './components/TerminalSection';
 import GithubSection from './components/GithubSection';
 import Explorations from './components/Explorations';
 import CurrentlyBuilding from './components/CurrentlyBuilding';
+import LatestLearnings from './components/LatestLearnings';
+import DeploymentAndEngineering from './components/DeploymentAndEngineering';
 import Challenges from './components/Challenges';
 function App() {
   return (
@@ -22,9 +24,11 @@ function App() {
         <TerminalSection />
         <About />
         <Projects />
+        <DeploymentAndEngineering />
         <GithubSection />
         <Skills />
         <Explorations />
+        <LatestLearnings />
         <Challenges />
         <Journey />
         <CurrentlyBuilding />

@@ -6,8 +6,8 @@ import { FaGithub } from 'react-icons/fa';
 const featuredProjects = [
   {
     title: "FORGE — AI Career Ecosystem",
-    description: "An AI-powered career ecosystem helping students identify skill gaps, optimize resumes, generate learning roadmaps, and connect with recruiters through an integrated hiring platform.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+    description: "AI-driven career platform delivering automated resume parsing, skill-gap analysis, and tailored learning paths. Engineered with a scalable role-based architecture to bridge students and recruiters seamlessly.",
+    image: "/images/forge_dashboard_1778594541088.png",
     tech: ["React.js", "Firebase", "Node.js", "Tailwind CSS", "AI APIs"],
     live: "https://forgee-mentor.vercel.app/",
     github: "https://github.com/ashishsingh256259/Mentor.git",
@@ -16,18 +16,19 @@ const featuredProjects = [
   },
   {
     title: "Realtime Collaboration Workspace",
-    description: "A full-stack collaborative productivity platform built using React, Node.js, Socket.IO, and MongoDB. The platform enables users to create shared rooms, communicate in realtime, collaborate on tasks, and manage synchronized workspace activities with instant updates across connected users. The system implements realtime bidirectional communication using Socket.IO, room-based collaboration architecture, live online presence tracking, typing indicators, and persistent message storage. The project focuses on realtime systems engineering, scalable event-driven communication, and collaborative application architecture.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072",
+    description: "Production-ready workspace built on event-driven architecture. Supports synchronized kanban boards, live chat, and online presence tracking. Designed for concurrent multi-user interactions with persistent low-latency state synchronization.",
+    image: "/images/realtime_workspace_1778594558445.png",
     tech: ["React.js", "Vite", "Node.js", "Express.js", "Socket.IO", "MongoDB", "Firebase"],
     live: "https://github.com/ashishsingh256259/Realtime-Workspace.git",
     github: "https://github.com/ashishsingh256259/Realtime-Workspace.git",
     features: ["Realtime room-based messaging", "Live online users and typing indicators", "Shared collaboration workspace", "Persistent chat storage with MongoDB", "Responsive modern SaaS-style UI", "Socket.IO realtime synchronization", "Authentication-ready architecture", "Reusable frontend/backend modular structure"],
-    architecture: ["Socket.IO realtime synchronization", "Room-based communication architecture", "Persistent MongoDB storage", "Event-driven system design"]
+    architecture: ["Socket.IO realtime synchronization", "Room-based communication architecture", "Persistent MongoDB storage", "Event-driven system design"],
+    isRealtime: true
   },
   {
     title: "Smart Parking System",
-    description: "AI-powered smart parking guidance system using A* Search and Bayesian reasoning to identify the shortest and most reliable parking path in smart city environments.",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=2070",
+    description: "Advanced smart city simulation utilizing A* pathfinding and Bayesian networks. Delivers realtime slot monitoring and predictive availability, visualized through an interactive, scalable dashboard.",
+    image: "/images/smart_parking_1778594574442.png",
     tech: ["React.js", "JavaScript", "A* Algorithm", "Bayesian Networks"],
     live: "https://smart-parking-system-fawn.vercel.app/",
     github: "https://github.com/ashishsingh256259/Smart-Parking-System.git",
@@ -120,6 +121,18 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
+                  </div>
+                )}
+
+                {project.isRealtime && (
+                  <div className="flex items-center gap-3 px-4 py-2.5 bg-green-500/10 border border-green-500/20 rounded-lg w-fit mt-4 glass-card group-hover:border-green-500/40 transition-colors">
+                    <div className="relative flex items-center justify-center w-2.5 h-2.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                    </div>
+                    <span className="text-green-400 text-[11px] font-bold uppercase tracking-widest flex items-center gap-2">
+                      Realtime Systems Engineering <span className="text-gray-500 text-[10px]">|</span> Live Sync
+                    </span>
                   </div>
                 )}
 
